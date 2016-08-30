@@ -1,0 +1,60 @@
+\documentclass[a4j,twocolumn]{jsarticle}
+\usepackage{subfigure}
+
+\def\Vec#1{\mbox{\boldmath $#1$}}
+\usepackage[dvipdfmx]{graphicx}
+
+\setlength{\textheight}{275mm}
+\headheight 5mm
+\topmargin -30mm
+\textwidth 185mm
+\oddsidemargin -15mm
+\evensidemargin -15mm
+\pagestyle{empty}
+\begin{document}
+\title{hiki上でのMathJax化}
+\author{情報科学科 西谷研究室 2535 那須比呂貴}
+\date{}
+\maketitle
+\section{目的}
+本研究の目的は，hiki上でMathML，LaTeXで記述された数式を表示させることである．Ma\
+thJaxを用いることにより，hiki上できれいに表示させることを考えている．さらに，西\
+谷滋人教授の授業の一つである数値計算のドキュメントを簡単にするためにプラグイン\\
+を用いることにより，普及を目指す．
+
+\section{既存システムの評価}
+\subsection{hikiについて}\begin{quote}\begin{verbatim}
+       サイト構築や更新を手軽にできるようにhikiを利用する
+\end{verbatim}\end{quote}
+hikiとはWikiのクローンの一つで，Wikiとの違いはコードがRubyで記述されていること\\
+である．ページの編集はhiki文法による記述でおこなわれる．また，hikiには下記の特\\
+徴がある．
+\begin{enumerate}
+\item プラグインによる機能拡張
+\item アクセス制限が可能
+\item ページの追加，編集がしやすい
+\item 出力するHTMLを柔軟に変更可能
+\item システムのプロトタイプを容易に作成できる
+\end{enumerate}
+また，hikidocというライブラリを使うことで，hiki文法で書かれたテキストをHTMLに変\
+換できる．
+
+\subsection{MathJaxについて}
+本研究がMathJaxを用いる理由は，FireFoxなどではMathMLがデフォルトであるので，Mat\
+hJaxを用いなくても実現が可能だが，SafariやIEなどにはないので，MathJax用いること\
+により実現を可能にする．MathJaxはLaTex並みの数式表示の能力をJavaScriptを実現し\\
+たライブラリである．
+\begin{enumerate}
+\item MathJaxをウェブページコンテンツと一緒にダウンロードし，ページ中の数式マークアップを走査し，数式を組版することができる．
+\end{enumerate}\begin{enumerate}
+\item MathJaxはLaTeXの数学環境コマンドを再現できる．
+\end{enumerate}
+\section{hiki上でのmathjaxの導入手順}
+本研究では以下のような方法で機能を実装する．
+
+\subsection{hikiとmathjaxを連携させ，hikiで入力した内容をmathjax化させる}
+\subsection{プラグインを用いることにより，全員ができるようにする}
+\section{今後の課題}
+現状ではrackupで起動した場合上手くjsが動いていないのでその原因を探る．
+プラグインによる実装が可能を検証する．
+\end{document}
