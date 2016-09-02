@@ -18,14 +18,14 @@
 西谷研で行われる数値計算のプログラム開発において，数式を多用した文書作成が必須である．
 また，文書提供にはwebベースのhikiにより管理がなされている．
 しかし，hikiにおいて数式を表示するために使われてきたMathMLへの変換ソフトの
-maintenanceが近年なされておらず，これらのシステムを見なおす必要が出てきた．
+メンテナンスが近年なされておらず，これらのシステムを見なおす必要が出てきた．
 本研究の目的は，
 MathJaxを用いることにより，hiki上で数式をきれいにかつ容易に表示させる
 システムを開発することである．
 
 \section{既存システムの評価}
 \subsection{hikiについて}
-サイト構築や更新を手軽にできるwikiクローンの1つであるhikiを利用している．
+サイト構築や更新を手軽にできるWikiクローンの1つであるhikiを利用している．
 Wikiとの違いはコードがRubyで記述されていることである．
 hikiは，hikidocというライブラリを使うことで，hiki文法で書かれたテキストをHTMLに変換している．
 hikiには下記の特徴がある．
@@ -55,8 +55,8 @@ hikiでは，Ruby 用ライブラリであるmathml.rbを利用している\cite
 \end{enumerate}
 以上の特徴より，本研究ではMathJaxを用いることが適当と考えた．
 
-\section{hiki上でのmathjaxの導入手順}
-\subsection{hikiとmathjaxを連携させ，hikiで入力した内容をmathjax化させる}
+\section{hiki上でのMathJaxの導入手順}
+\subsection{hikiとMathJaxを連携させ，hikiで入力した内容をMathJax化させる}
 hikiでのmathjax表示は次のようにして実現できる．
 \begin{itemize}
 \item JavaScriptをdirectory内に用意
@@ -82,6 +82,6 @@ hikiではプラグインで提供されるのが標準である．
 そこで前述の作業を自動化するpluginを実装する．
 
 \section{参照文献}\begin{enumerate}
-\item \verb|mathml, ひらく工房(http://www.hiraku.ro/?mathml.rb)|, 黒田 ひらく, 2016/8/31アクセス．
+\item\verb|mathml, ひらく工房(http://www.hiraku.ro/?mathml.rb)|, 黒田 ひらく, 2016/8/31アクセス．
 \end{enumerate}
 \end{document}
